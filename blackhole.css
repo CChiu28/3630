@@ -1,0 +1,69 @@
+body {
+    background-image: url('./media/black-hole.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /* padding-top: 10%; */
+    height: 100%;
+}
+#front {
+    position: relative;
+}
+#header {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    background-color: rgba(0,0,0,0.5);
+}
+#title {
+    font-family: 'Kanit', sans-serif;
+    color: #efee8b;
+    font-size: 6em;
+    text-shadow: 0 0 15px #bcbb38;
+    text-align: center;
+}
+.carousel-outer {
+    position: relative;
+}
+.carousel-inner > .carousel-item {
+    height: 100vh;
+}
+.carousel-inner > .carousel-item > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    max-height: auto;
+    width: auto;
+  }
+
+.card {
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+.card-body {
+    width: 80%;
+    align-self: center;
+}
+#kurz,#bhsize {
+    width: 100%;
+    height: auto;
+    padding: 0 5rem;
+    background-color: rgba(0,0,0,0.5);
+}
+#whatvid,#bhvid {
+    padding: 0 5rem;
+}
+#what, #bhbig {
+    font-family: 'ABeeZee', sans-serif;
+    text-emphasis: bold;
+    color: white;
+}
+
+
+hr {
+    margin: 3em 10em 3em 10em;
+    border-color: white;
+}
