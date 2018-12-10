@@ -1,0 +1,9 @@
+body {
+    background-color: rgb(179, 217, 255);
+}
+.container {
+    margin: auto;
+}
+.rounded {
+    border-radius: 25px !important;
+}
