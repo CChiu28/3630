@@ -1,12 +1,14 @@
 
-function getInput(form) {
-  let name = document.getElementById('name').value;
-  let body_part = document.getElementById('body_part').value;
-  let fluid = document.getElementById('fluid').value;
-  let substance = document.getElementById('substance').value;
-  let sentence = name+" is sick with the "+body_part+" flu. Drink more "+fluid+" and take "+substance+" as needed.";
-  console.log(name+body_part+fluid+substance);
-  outVoice(sentence)
+function getInput() {
+  let noun1 = document.getElementById('noun1').value;
+  let occupation = document.getElementById('occupation').value;
+  let animal = document.getElementById('animal').value;
+  let place = document.getElementById('place').value;
+  let verb1 = document.getElementById('verb1').value;
+  let noun2 = document.getElementById('noun2').value;
+  let sentence = "In the book War of the "+noun1+", the main character is an anonymous "+occupation+" who records the arrival of "+animal+" in "+place+". Needless to say, havoc reigns as the "+animal+" continue to "+verb1+" everything in sight, until they are killed by the common "+noun2;
+  // console.log(name+body_part+fluid+substance);
+  outVoice(sentence);
   document.getElementById("output").innerHTML = sentence;
 }
 

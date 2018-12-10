@@ -11,39 +11,52 @@
 <body>
     <header class="masthead">
         <h1 class="text-center">Mad Libs!</h1>
+        <h4 class="text-center">David Chiu</h4>
     </header>
     <div class="container border border-primary rounded">
         <div class="m-3">
-        <div class="input-group input-group-sm mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Name</span>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Noun(plural)</span>
+                </div>
+                <input id="noun1" type="text" class="form-control" aria-label="name">
             </div>
-            <input id="name" type="text" class="form-control" placeholder="Name" aria-label="name">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Body part</span>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Animal(plural)</span>
+                </div>
+                <input id="animal" type="text" class="form-control" aria-label="body_part">
             </div>
-            <input id="body_part" type="text" class="form-control" placeholder="Body part" aria-label="body_part">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Fluid</span>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Occupation</span>
+                </div>
+                <input id="occupation" type="text" class="form-control" aria-label="fluid">
             </div>
-            <input id="fluid" type="text" class="form-control" placeholder="Fluid" aria-label="fluid">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text">Substance</span>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Place</span>
+                </div>
+                <input id="place" type="text" class="form-control" aria-label="substance">
             </div>
-            <input id="substance" type="text" class="form-control" placeholder="substance" aria-label="substance">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Verb</span>
+                </div>
+                <input id="verb1" type="text" class="form-control" aria-label="substance">
+            </div>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Noun</span>
+                </div>
+                <input id="noun2" type="text" class="form-control" aria-label="substance">
+            </div>
+            <input type="button" value="Mad Libs!" id="getInput" onClick="getInput()">
+            <select id="voiceSelect"></select>
+            <div>
+                <span id="output"></span>
+            </div>
         </div>
-        <input type="button" value="button" id="getInput" onClick="getInput()">
-        <select id="voiceSelect"></select>
-        <div>
-            <span id="output"></span>
-        </div>
-    </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
