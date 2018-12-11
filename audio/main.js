@@ -6,7 +6,9 @@ function getInput() {
   let place = document.getElementById('place').value;
   let verb1 = document.getElementById('verb1').value;
   let noun2 = document.getElementById('noun2').value;
-  let sentence = "In the book War of the "+noun1+", the main character is an anonymous "+occupation+" who records the arrival of "+animal+" in "+place+". Needless to say, havoc reigns as the "+animal+" continue to "+verb1+" everything in sight, until they are killed by the common "+noun2;
+  if (ownsentence!=null)
+    var sentence = document.getElementById('ownsentence').value;
+  else var sentence = "In the book War of the "+noun1+", the main character is an anonymous "+occupation+" who records the arrival of "+animal+" in "+place+". Needless to say, havoc reigns as the "+animal+" continue to "+verb1+" everything in sight, until they are killed by the common "+noun2;
   // console.log(name+body_part+fluid+substance);
   outVoice(sentence);
   document.getElementById("output").innerHTML = sentence;
