@@ -1,20 +1,19 @@
 
 function getInput() {
-  let noun1 = document.getElementById('noun1').value;
-  let occupation = document.getElementById('occupation').value;
-  let animal = document.getElementById('animal').value;
-  let place = document.getElementById('place').value;
-  let verb1 = document.getElementById('verb1').value;
-  let noun2 = document.getElementById('noun2').value;
-  if (ownsentence!=null)
-    var sentence = document.getElementById('ownsentence').value;
-  else var sentence = "In the book War of the "+noun1+", the main character is an anonymous "+occupation+" who records the arrival of "+animal+" in "+place+". Needless to say, havoc reigns as the "+animal+" continue to "+verb1+" everything in sight, until they are killed by the common "+noun2;
-  // console.log(name+body_part+fluid+substance);
+  console.log();
+  let verb = $("#verb").val();
+  let noun = $("#noun").val();
+  let adjective = $("#adjective").val();
+  if ($("#ownsentence").val()!="") {
+     var sentence = $("#ownsentence").val();
+  } else var sentence = `There are too many ${verb} ${noun} on this ${adjective} plane!", he screamed.`;
+  console.log(sentence);
+  $("#result").empty().append(sentence);
   outVoice(sentence);
-  document.getElementById("output").innerHTML = sentence;
 }
 
 function outVoice(sentence) {
+  $("#output").show();
   var v = speechSynthesis.getVoices();
   var voicechange = document.querySelector('select');
   var selectedOption = voicechange.selectedOptions[0].getAttribute('data-name');
@@ -27,6 +26,7 @@ function outVoice(sentence) {
   u.text = sentence;
   u.lang = 'en-US';
   u.rate = 1.0;
+  console.log(u);
   speechSynthesis.speak(u);
 }
 
