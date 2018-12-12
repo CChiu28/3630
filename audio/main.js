@@ -1,15 +1,23 @@
-let verb = $("#verb").val();
-let noun = $("#noun").val();
-let adjective = $("#adjective").val();
+
 
 function getInput() {
-  console.log();
+  let verb = $("#verb").val();
+  let noun = $("#noun").val();
+  let adjective = $("#adjective").val();
   if ($("#ownsentence").val()!="") {
      var sentence = $("#ownsentence").val();
-  } else var sentence = `There are too many ${verb} ${noun} on this ${adjective} plane!", he screamed.`;
+  } else var sentence = randomSentence(noun,verb,adjective);
+  console.log(verb+noun+adjective);
   console.log(sentence);
   $("#result").empty().append(sentence);
   outVoice(sentence);
+}
+
+function randomSentence(noun,verb,adjective) {
+  let sentences = [`"There are too many ${verb} ${noun} on this ${adjective} plane!", he screamed.`,
+    `She was ${verb} ${noun} on the ${adjective} beach.`,
+    `How are there so many ${noun} ${verb} on this ${adjective} boat?`];
+  return sentences[Math.floor(Math.random()*3)];
 }
 
 function outVoice(sentence) {
