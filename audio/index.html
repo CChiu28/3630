@@ -13,39 +13,45 @@
         <h1 class="text-center">Mad Libs!</h1>
         <h4 class="text-center">David Chiu</h4>
     </header>
-    <div class="container border border-primary rounded">
-        <div class="m-5">
-            <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Verb ending in -ing</span>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card border border-primary rounded col-md-6">
+                <div class="card-body">
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Verb ending in -ing</span>
+                        </div>
+                        <input id="verb" type="text" class="form-control" aria-label="noun">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Noun(plural)</span>
+                        </div>
+                        <input id="noun" type="text" class="form-control" aria-label="animal">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Adjective</span>
+                        </div>
+                        <input id="adjective" type="text" class="form-control" aria-label="occupation">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Enter your<br>own sentence!</span>
+                        </div>
+                        <textarea id="ownsentence" class="form-control" rows="2" aria-label="With textarea"></textarea>
+                    </div>
+                    <div class="form-group mb-3">
+                        <select id="voiceSelect" class="form-control"></select>
+                    </div>
+                    <button id="getInput" class="btn btn-primary" onClick="getInput()">Mad Libs!</button>
                 </div>
-                <input id="verb" type="text" class="form-control" aria-label="noun">
             </div>
-            <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Noun(plural)</span>
+            <div id="output" class="card border border-primary rounded my-3">
+                <div class="card-body">
+                    <span id="result"></span>
                 </div>
-                <input id="noun" type="text" class="form-control" aria-label="animal">
             </div>
-            <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Adjective</span>
-                </div>
-                <input id="adjective" type="text" class="form-control" aria-label="occupation">
-            </div>
-            <div class="input-group input-group-sm mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">Enter your own sentence!</span>
-                </div>
-                <textarea id="ownsentence" class="form-control" aria-label="own"></textarea>
-            </div>
-            <input type="button" value="Mad Libs!" id="getInput" onClick="getInput()">
-            <select id="voiceSelect"></select>
-        </div>
-    </div>
-    <div id="output" class="container border border-primary rounded">
-        <div class="m-5">
-            <span id="result"></span>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

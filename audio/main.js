@@ -1,9 +1,9 @@
+let verb = $("#verb").val();
+let noun = $("#noun").val();
+let adjective = $("#adjective").val();
 
 function getInput() {
   console.log();
-  let verb = $("#verb").val();
-  let noun = $("#noun").val();
-  let adjective = $("#adjective").val();
   if ($("#ownsentence").val()!="") {
      var sentence = $("#ownsentence").val();
   } else var sentence = `There are too many ${verb} ${noun} on this ${adjective} plane!", he screamed.`;

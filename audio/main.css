@@ -1,13 +1,17 @@
 body {
     background-color: rgb(179, 217, 255);
 }
-.container {
+/* .container {
     margin: auto;
+} */
+
+.card {
+    width: 85%;
 }
 .rounded {
-    border-radius: 25px !important;
+    border-radius: 10px !important;
 }
 
-/* #output {
+#output {
     display: none;
-} */
+}
